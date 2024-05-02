@@ -1,4 +1,4 @@
-# ADR for Pants Index
+# ADR
 
 ## Decision: Front End
 
