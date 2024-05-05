@@ -1,5 +1,11 @@
 # ADR
 
+## Decision: Web Design 5/5
+
+Model after Ssense as it is a very neutral design and can be taken many places after this. Also never considered it to be difficult to use the Ssense website
+
+***Accepted***
+
 ## Decision: Front End
 
 1. HTML
@@ -9,6 +15,8 @@
 This will allow me to use the bare bones vanilla stuff as in sprint 1 I will only be doing sorting of the jeans
 
 ***Accepted***
+
+
 
 
 ## Decision: Back End
@@ -29,3 +37,5 @@ Github Pages
 This allows for free deployment directly from the repo. Can look into serverless deployment like AWS Lambda, Google Cloud and others
 
 ***Under Review***
+
+
