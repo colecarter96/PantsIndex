@@ -1,0 +1,32 @@
+/* This is styling for the font 
+
+/* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 100 to 900*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+
+body {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 400;
+    background: rgb(252, 252, 248);
+}
+
+header {
+    font-size: 200%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    /* background-color: red; */
+    text-align: center; 
+    width: 100%;
+    position: fixed;
+}
+
+
+
+
+/* body {
+    font-family: Tahoma, sans-serif;
+    font-weight: lighter;
+} */
