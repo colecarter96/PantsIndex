@@ -5,11 +5,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
 
 
+/* This is styling for the whole file */
+
 body {
     font-family: "Libre Franklin", sans-serif;
     font-weight: 400;
     background: rgb(252, 252, 248);
 }
+
+
+
+/* This is just styling the header, which as of now is a title */
 
 header {
     font-size: 200%;
@@ -25,8 +31,11 @@ header {
 
 
 
+/* This is styling for the left side of the page (The Filter Nav on the Left) */
 
-/* body {
-    font-family: Tahoma, sans-serif;
-    font-weight: lighter;
-} */
+.leftFilter{
+    padding-top: 10%;
+    padding-left: 1%;
+}
+
+
