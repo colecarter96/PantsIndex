@@ -7,11 +7,45 @@
 
 /* This is styling for the whole file */
 
-body {
+
+body, html {
+    padding : 0px;
+    margin : 0px;
+    height : 100%;
     font-family: "Libre Franklin", sans-serif;
     font-weight: 400;
     background: rgb(252, 252, 248);
+} 
+
+#wrapper {
+    /* width:900px; */
+    height:100%;
+    margin: 0px;
+    padding: 0px;
 }
+
+#header {
+    height:10%;
+    /* width:900px; */
+}
+
+#nav {
+    background-color:#fff6f6;
+    width:15%;
+    height:90%;
+    float:left;
+    text-align: left;
+    
+}
+
+#content {
+    height:90%;
+    background-color:rgb(247, 255, 247);
+    width: 85%;
+    float:left;
+}
+
+
 
 
 
@@ -26,7 +60,9 @@ header {
     /* background-color: red; */
     text-align: center; 
     width: 100%;
+    height: 10%;
     position: fixed;
+    background-color: beige;
 }
 
 
@@ -34,11 +70,15 @@ header {
 /* This is styling for the left side of the page (The Filter Nav on the Left) */
 
 .leftFilter{
-    padding-top: 10%;
-    padding-left: 1%;
+    /* margin-top: 10%; */
+    /* height: 90%;
+    top: 220; */
+    padding-left: 5%;
+    padding-top: 5%
 }
 
-p.leftFilter {
-    
+#filterTag .leftFilter{
+    font-weight: 500;
+
 }
 
