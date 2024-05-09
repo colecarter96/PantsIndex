@@ -32,7 +32,7 @@ body, html {
 #nav {
     background-color:#fff6f6;
     width:15%;
-    height:90%;
+    height: 100%;
     float:left;
     text-align: left;
     
@@ -43,6 +43,9 @@ body, html {
     background-color:rgb(247, 255, 247);
     width: 85%;
     float:left;
+    /* padding: 10px; */
+    /* display: table; */
+
 }
 
 
@@ -81,4 +84,28 @@ header {
     font-weight: 500;
 
 }
+
+/* .pantsCard {
+    padding:10px;
+    width: 33.33%; 
+} */
+
+.pantsCard{
+    float: left;
+    width: 31%;
+    padding: 1%;
+    /* padding: 10px; */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+
+.pantsCard .img{
+     max-width: 100%;
+}
+
 
