@@ -14,7 +14,7 @@ body, html {
     height : 100%;
     font-family: "Libre Franklin", sans-serif;
     font-weight: 400;
-    background: rgb(252, 252, 248);
+    background: rgb(255, 255, 255);
 } 
 
 #wrapper {
@@ -26,23 +26,24 @@ body, html {
 
 #header {
     height:10%;
-    /* width:900px; */
+    
 }
 
 #nav {
-    background-color:#fff6f6;
-    width:15%;
+    /* background-color:#fff6f6; */
+    width:10%;
     height: 100%;
     float:left;
     text-align: left;
-    
+
 }
 
 #content {
     height:90%;
-    background-color:rgb(247, 255, 247);
     width: 85%;
     float:left;
+    /* float:none; */
+    padding-left: 5%
     /* padding: 10px; */
     /* display: table; */
 
@@ -60,12 +61,10 @@ header {
     padding: 0;
     top: 0;
     left: 0;
-    /* background-color: red; */
     text-align: center; 
     width: 100%;
     height: 10%;
-    position: fixed;
-    background-color: beige;
+    
 }
 
 
@@ -73,10 +72,7 @@ header {
 /* This is styling for the left side of the page (The Filter Nav on the Left) */
 
 .leftFilter{
-    /* margin-top: 10%; */
-    /* height: 90%;
-    top: 220; */
-    padding-left: 5%;
+    padding-left: 13%;
     padding-top: 5%
 }
 
@@ -85,15 +81,12 @@ header {
 
 }
 
-/* .pantsCard {
-    padding:10px;
-    width: 33.33%; 
-} */
+
 
 .pantsCard{
-    float: left;
-    width: 31%;
-    padding: 1%;
+    float: left; 
+    width: 26%;
+    padding: 2%;
     /* padding: 10px; */
 }
 
