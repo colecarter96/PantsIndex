@@ -94,18 +94,6 @@ header {
     /* padding: 10px; */
 }
 
-/* .pantsCardIMG {
-    width: 100%;
-    height: 100%;
-}
-
-.pantsCardIMG img {
-    object-fit: cover;
-    width: 230px;
-    height: 230px;
-
-  } */
-
 .pantsCardIMG {
     position: relative;
     width: 100%;
@@ -123,14 +111,15 @@ header {
     max-height: 100%;
     width: auto;
     height: auto;
+    
 }
 
 .hoverIMG{
-    opacity:0;
+    opacity: 0;
 }
 
 .coverIMG:hover {
-    opacity:0;
+    opacity: 0;
 }
 
 .hoverIMG:hover{
