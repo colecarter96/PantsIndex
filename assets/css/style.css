@@ -12,9 +12,10 @@ body, html {
     padding : 0px;
     margin : 0px;
     height : 100%;
+    width: 100%;
     font-family: "Libre Franklin", sans-serif;
     font-weight: 400;
-    background: rgb(255, 255, 255);
+    /* background: rgb(0, 0, 0); */
 } 
 
 #wrapper {
@@ -29,24 +30,32 @@ body, html {
     
 }
 
-#nav {
-    /* background-color:#fff6f6; */
-    width:10%;
+#leftNav {
+    /* background-color:orange; */
+    width:9%;
+    padding-left: 1%;
     height: 100%;
     float:left;
     text-align: left;
+    font-size: 95%;
+}   
+
+#rightNav {
+    /* background-color:blue; */
+    width:10%;
+    height: 100%;
+    float:right;
+    text-align: left;
+    font-size: 95%;
 
 }
 
 #content {
-    height:90%;
-    width: 85%;
+    height:100%;
+    width: 75%;
     float:left;
-    /* float:none; */
-    padding-left: 5%
-    /* padding: 10px; */
-    /* display: table; */
-
+    padding-left: 5%;
+    font-size: 80%;
 }
 
 
@@ -64,22 +73,17 @@ header {
     text-align: center; 
     width: 100%;
     height: 10%;
-    
+    font-weight:500;    
 }
 
 
 
 /* This is styling for the left side of the page (The Filter Nav on the Left) */
 
-.leftFilter{
-    padding-left: 13%;
-    padding-top: 5%
-}
 
-#filterTag .leftFilter{
-    font-weight: 500;
 
-}
+
+
 
 
 
@@ -89,6 +93,40 @@ header {
     padding: 2%;
     /* padding: 10px; */
 }
+
+.pantsCardIMG {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* This makes the div a square */
+    /* background-color: white;  */
+    overflow: hidden; 
+}
+
+.pantsCardIMG img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    
+}
+
+.hoverIMG{
+    opacity: 0;
+}
+
+.coverIMG:hover {
+    opacity: 0;
+}
+
+.hoverIMG:hover{
+    opacity: 1;
+}
+
+
 
 .row:after {
     content: "";
@@ -101,4 +139,11 @@ header {
      max-width: 100%;
 }
 
+
+/* Styling the sorting grouping to have them a little closer to each other */
+.sortGroup {
+    
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
 
