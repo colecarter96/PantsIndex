@@ -2,148 +2,153 @@
 
 /* <uniquifier>: Use a unique and descriptive class name
  <weight>: Use a value from 100 to 900*/
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
 
 
-/* This is styling for the whole file */
-
-
-body, html {
-    padding : 0px;
-    margin : 0px;
-    height : 100%;
-    width: 100%;
-    font-family: "Libre Franklin", sans-serif;
-    font-weight: 400;
-    /* background: rgb(0, 0, 0); */
-} 
-
-#wrapper {
-    /* width:900px; */
-    height:100%;
-    margin: 0px;
-    padding: 0px;
-}
-
-#header {
-    height:10%;
-    
-}
-
-#leftNav {
-    /* background-color:orange; */
-    width:9%;
-    padding-left: 1%;
-    height: 100%;
-    float:left;
-    text-align: left;
-    font-size: 95%;
-}   
-
-#rightNav {
-    /* background-color:blue; */
-    width:10%;
-    height: 100%;
-    float:right;
-    text-align: left;
-    font-size: 95%;
-
-}
-
-#content {
-    height:100%;
-    width: 75%;
-    float:left;
-    padding-left: 5%;
-    font-size: 80%;
-}
-
-
-
-
-
-/* This is just styling the header, which as of now is a title */
-
-header {
-    font-size: 200%;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    text-align: center; 
-    width: 100%;
-    height: 10%;
-    font-weight:500;    
-}
-
-
-
-/* This is styling for the left side of the page (The Filter Nav on the Left) */
-
-
-
-
-
-
-
-
-.pantsCard{
-    float: left; 
-    width: 26%;
-    padding: 2%;
-    /* padding: 10px; */
-}
-
-.pantsCardIMG {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%; /* This makes the div a square */
-    /* background-color: white;  */
-    overflow: hidden; 
-}
-
-.pantsCardIMG img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    
-}
-
-.hoverIMG{
-    opacity: 0;
-}
-
-.coverIMG:hover {
-    opacity: 0;
-}
-
-.hoverIMG:hover{
-    opacity: 1;
-}
-
-
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-    
-}
-
-.pantsCard .img{
+ /* This is styling for the whole file */
+ 
+ 
+ body, html {
+     padding : 0px;
+     margin : 0px;
+     height : 100%;
+     width: 100%;
+     font-family: "Libre Franklin", sans-serif;
+     font-weight: 400;
+     /* background: rgb(0, 0, 0); */
+ } 
+ 
+ #wrapper {
+     /* width:900px; */
+     height:100%;
+     margin: 0px;
+     padding: 0px;
+ }
+ 
+ #header {
+     height:10%;
+     
+ }
+ 
+ #leftNav {
+     /* background-color:orange; */
+     width:9%;
+     padding-left: 1%;
+     height: 100%;
+     float:left;
+     text-align: left;
+     font-size: 95%;
+ }   
+ 
+ #rightNav {
+     /* background-color:blue; */
+     width:10%;
+     height: 100%;
+     float:right;
+     text-align: left;
+     font-size: 95%;
+ 
+ }
+ 
+ #content {
+     height:100%;
+     width: 75%;
+     float:left;
+     padding-left: 5%;
+     font-size: 80%;
+ }
+ 
+ 
+ 
+ 
+ 
+ /* This is just styling the header, which as of now is a title */
+ 
+ header {
+     font-size: 200%;
+     margin: 0;
+     padding: 0;
+     top: 0;
+     left: 0;
+     text-align: center; 
+     width: 100%;
+     height: 10%;
+     font-weight:500;    
+ }
+ 
+ 
+ 
+ /* This is styling for the left side of the page (The Filter Nav on the Left) */
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ .pantsCard{
+     float: left; 
+     width: 26%;
+     padding: 2%;
+     /* padding: 10px; */
+ }
+ 
+ .pantsCardIMG {
+     position: relative;
+     width: 100%;
+     padding-bottom: 100%; /* This makes the div a square */
+     /* background-color: white;  */
+     overflow: hidden; 
+ }
+ 
+ .pantsCardIMG img {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
      max-width: 100%;
-}
+     max-height: 100%;
+     width: auto;
+     height: auto;
+     
+ }
+ 
+ .hoverIMG{
+     opacity: 0;
+ }
+ 
+ .coverIMG:hover {
+     opacity: 0;
+ }
+ 
+ .hoverIMG:hover{
+     opacity: 1;
+ }
+ 
+ 
+ 
+ .row:after {
+     content: "";
+     display: table;
+     clear: both;
+     
+ }
+ 
+ .pantsCard .img{
+      max-width: 100%;
+ }
+ 
+ 
+ /* Styling the sorting grouping to have them a little closer to each other */
+ .sortGroup {
+     
+     padding-top: 1%;
+     padding-bottom: 1%;
+ }
 
-
-/* Styling the sorting grouping to have them a little closer to each other */
-.sortGroup {
-    
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
+ .sortGroupButton:hover {
+    text-decoration: underline;
+ }
+ 
+ 
