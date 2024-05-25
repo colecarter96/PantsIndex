@@ -13,25 +13,16 @@ function sortDivs() {
 }
 
 // Call the function to sort and reorder divs
+// sortDivs();
 
-
-/**
- * 
- * @param {string} order options (descending, ascending) deciding if to sort low to high or high to low by leg opening
- */
-function sortPantsByLegOpening(order = 'ascending') {
+function sortPantsByLegOpening() {
     const container = document.getElementById('content');
     const pantsCards = Array.from(container.getElementsByClassName('pantsCard'));
 
     pantsCards.sort((a, b) => {
       const aLegOpening = parseFloat(a.getAttribute('leg-opening')) || 0;
       const bLegOpening = parseFloat(b.getAttribute('leg-opening')) || 0;
-      
-      if (order === 'descending') {
-          return bLegOpening - aLegOpening; // Sort high to low
-      } else {
-          return aLegOpening - bLegOpening; // Sort low to high (default)
-      }
+      return aLegOpening - bLegOpening;
     });
 
     // Clear the container
@@ -41,124 +32,14 @@ function sortPantsByLegOpening(order = 'ascending') {
     pantsCards.forEach(pantsCard => container.appendChild(pantsCard));
 }
 
-// Call the sorting function for leg opening
+// Call the sorting function
 
 document.addEventListener('DOMContentLoaded', (event) => {
     // Add click event listener to the specified <p> element
     const sortTrigger = document.getElementById('sortLegLowHigh');
     if (sortTrigger) {
         sortTrigger.addEventListener('click', () => {
-            sortPantsByLegOpening('ascending');
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const sortTrigger = document.getElementById('sortLegHighLow');
-    if (sortTrigger) {
-        sortTrigger.addEventListener('click', () => {
-            sortPantsByLegOpening('descending');
-        });
-    }
-});
-
-
-/**
- * 
- * @param {string} order options (descending, ascending) deciding if to sort low to high or high to low by thigh
- */
-function sortPantsByLegOpening(order = 'ascending') {
-    const container = document.getElementById('content');
-    const pantsCards = Array.from(container.getElementsByClassName('pantsCard'));
-
-    pantsCards.sort((a, b) => {
-      const aLegOpening = parseFloat(a.getAttribute('thigh')) || 0;
-      const bLegOpening = parseFloat(b.getAttribute('thigh')) || 0;
-      
-      if (order === 'descending') {
-          return bLegOpening - aLegOpening; // Sort high to low
-      } else {
-          return aLegOpening - bLegOpening; // Sort low to high (default)
-      }
-    });
-
-    // Clear the container
-    container.innerHTML = '';
-
-    // Append sorted pantsCards
-    pantsCards.forEach(pantsCard => container.appendChild(pantsCard));
-}
-
-// Call the sorting function for leg opening
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const sortTrigger = document.getElementById('sortThighLowHigh');
-    if (sortTrigger) {
-        sortTrigger.addEventListener('click', () => {
-            sortPantsByLegOpening('ascending');
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const sortTrigger = document.getElementById('sortThighHighLow');
-    if (sortTrigger) {
-        sortTrigger.addEventListener('click', () => {
-            sortPantsByLegOpening('descending');
-        });
-    }
-});
-
-
-
-
-/**
- * 
- * @param {string} order options (descending, ascending) deciding if to sort low to high or high to low by rise
- */
-function sortPantsByLegOpening(order = 'ascending') {
-    const container = document.getElementById('content');
-    const pantsCards = Array.from(container.getElementsByClassName('pantsCard'));
-
-    pantsCards.sort((a, b) => {
-      const aLegOpening = parseFloat(a.getAttribute('rise')) || 0;
-      const bLegOpening = parseFloat(b.getAttribute('rise')) || 0;
-      
-      if (order === 'descending') {
-          return bLegOpening - aLegOpening; // Sort high to low
-      } else {
-          return aLegOpening - bLegOpening; // Sort low to high (default)
-      }
-    });
-
-    // Clear the container
-    container.innerHTML = '';
-
-    // Append sorted pantsCards
-    pantsCards.forEach(pantsCard => container.appendChild(pantsCard));
-}
-
-// Call the sorting function for leg opening
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const sortTrigger = document.getElementById('sortRiseLowHigh');
-    if (sortTrigger) {
-        sortTrigger.addEventListener('click', () => {
-            sortPantsByLegOpening('ascending');
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const sortTrigger = document.getElementById('sortThighHighLow');
-    if (sortTrigger) {
-        sortTrigger.addEventListener('click', () => {
-            sortPantsByLegOpening('descending');
+            sortPantsByLegOpening();
         });
     }
 });
