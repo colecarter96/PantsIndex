@@ -162,3 +162,69 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 });
+
+
+
+
+
+
+//testing new function
+
+function displayPantsByLegOpening(min, max) {
+    const container = document.getElementById('content');
+    const pantsCards = Array.from(container.getElementsByClassName('pantsCard'));
+
+    // Filter pantsCards with leg opening between 15 and 17
+    const filteredPantsCards = pantsCards.filter(pantsCard => {
+        const legOpening = parseFloat(pantsCard.getAttribute('leg-opening')) || 0;
+        return legOpening >= min && legOpening <= max;
+    });
+
+    // Clear the container
+    container.innerHTML = '';
+
+    // Append filtered pantsCards
+    filteredPantsCards.forEach(pantsCard => container.appendChild(pantsCard));
+}
+
+// Call the display function for leg opening
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Add click event listener to the specified <p> element
+    const displayTrigger = document.getElementById('hem810');
+    if (displayTrigger) {
+        displayTrigger.addEventListener('click', () => {
+            displayPantsByLegOpening(8, 10);
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Add click event listener to the specified <p> element
+    const displayTrigger = document.getElementById('hem1012');
+    if (displayTrigger) {
+        displayTrigger.addEventListener('click', () => {
+            displayPantsByLegOpening(10, 12);
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Add click event listener to the specified <p> element
+    const displayTrigger = document.getElementById('hem1517');
+    if (displayTrigger) {
+        displayTrigger.addEventListener('click', () => {
+            displayPantsByLegOpening(15, 17);
+        });
+    }
+});
+
+
+
+
+/**
+ * IDEA: Save initial container state to local variable, 
+ * every time filter is requested, go from initial state and add those params,
+ * have restore button to make everything go back
+ * if a button is unclicked, remove all of those params from current state (Could have to redo all of the current selected)
+ */
