@@ -50,6 +50,10 @@ body, html {
     padding-top: 10%;
 }
 
+hr{
+    display: none;
+}
+
 
 
 header {
