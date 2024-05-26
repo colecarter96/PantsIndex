@@ -58,7 +58,9 @@ body, html {
      font-size: 80%;
 }
  
- 
+hr{
+    display: none;
+}
  
  
  
@@ -151,30 +153,44 @@ header {
     text-decoration: underline;
  }
 
+ .hamburger{
+    display: none;
+ }
+
+
+
+
+
+ /* for mobile */
+
  @media all and (max-width: 600px) {
-    
-    header {
-        font-size: 165%;
-        margin: 0;
-        padding: 0;
-        top: 0;
-        left: 0;
+
+    body, html {
+        padding : 0px;
+        margin : 0px;
+        height : 100%;
         width: 100%;
-        height: 10%;
-        font-weight:500; 
-        text-align: center;    
-   }
+        font-family: "Libre Franklin", sans-serif;
+        font-weight: 400;
+        /* background: rgb(0, 0, 0); */
+    } 
+    
+    
 
    #content {
         height:100%;
         width: 100%;
-        float:left;
-        padding-left: 5%;
-        font-size: 80%;
+        font-size: 70%;
+        text-align: left;
+        margin-top: 5%;
+        padding-left: 0px;
+        float:none;
+
     }
     
     #header{
-        height: 10%;
+        height: 7%;
+        width: 100%;
     }
 
     #leftNav {
@@ -185,15 +201,69 @@ header {
         display: none;
     }
 
-    #content{
+
+   
+
+ 
+
+    header {
+        font-size: 150%;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        /* width: 100%; */
+        font-weight:500; 
         text-align: center;
+   }
+
+
+    hr {
+        display: block;
+        width: 100%;
+        top:0;
+        left:0;
+        margin: 0;
+        padding: 0;
     }
 
     .pantsCard{
         float: left; 
-        width: 43%;
-        padding: 2%;
-        /* padding: 10px; */
+        width: 48%;
+        padding: 1%;
+
+    }
+
+    .pantsCard h3{
+        margin-bottom: 10px;
+        padding-left: 5%;
+    }
+
+    .pantsCard p{
+        line-height: 0.5em;
+        margin-top: 0;
+        padding-left: 5%;
+    }
+
+
+    .pantsCardIMG {
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%; /* This makes the div a square */
+        /* background-color: white;  */
+        overflow: hidden; 
+    }
+    
+    .pantsCardIMG img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        
     }
  }
  
