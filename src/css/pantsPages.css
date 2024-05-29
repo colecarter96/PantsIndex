@@ -72,7 +72,7 @@ header {
 .pantsIMG{
     position: relative;
     width: 50%;
-    padding-bottom: 50%; /* This makes the div a square */
+    padding-bottom: 80%; /* This makes the div a square used to be 50, made rectangle for pants shape*/
     /* background-color: white;  */
     overflow: hidden; 
     /* how to move the images to the right within their div */
@@ -135,6 +135,8 @@ header {
     #rightNav {
         display: none;
     }
+
+    
 
  
 
