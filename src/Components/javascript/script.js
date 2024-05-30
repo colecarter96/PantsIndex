@@ -1,170 +1,34 @@
-function sortDivs() {
-    const container = document.getElementById('content');
-    const items = Array.from(container.getElementsByClassName('pantsCard'));
+var initialState = []
+var currentState = []
 
-    // Sort items by data-sort attribute
-    items.sort((a, b) => a.getAttribute('leg-opening') - b.getAttribute('leg-opening'));
-
-    // Clear the container
-    container.innerHTML = '';
-
-    // Append the sorted items
-    items.forEach(item => container.appendChild(item));
+/**
+ * Saves the initial state of the page
+ * @params None
+ * @returns None
+ */
+function saveContent() {
+    const sourceDiv = document.getElementById('content');
+    const content = sourceDiv.innerHTML;
+    localStorage.setItem('savedContent', content);
+    console.log('Content saved:', content);
 }
-
-// Call the function to sort and reorder divs
 
 
 /**
- * 
- * @param {string} order options (descending, ascending) deciding if to sort low to high or high to low by leg opening
+ * Loads the original content
+ * @params None
+ * @returns None
  */
-function sortPantsByLegOpening(order = 'ascending') {
-    const container = document.getElementById('content');
-    const pantsCards = Array.from(container.getElementsByClassName('pantsCard'));
-
-    pantsCards.sort((a, b) => {
-      const aLegOpening = parseFloat(a.getAttribute('leg-opening')) || 0;
-      const bLegOpening = parseFloat(b.getAttribute('leg-opening')) || 0;
-      
-      if (order === 'descending') {
-          return bLegOpening - aLegOpening; // Sort high to low
-      } else {
-          return aLegOpening - bLegOpening; // Sort low to high (default)
-      }
-    });
-
-    // Clear the container
-    container.innerHTML = '';
-
-    // Append sorted pantsCards
-    pantsCards.forEach(pantsCard => container.appendChild(pantsCard));
+function loadContent() {
+    const targetDiv = document.getElementById('content');
+    const savedContent = localStorage.getItem('savedContent');
+    if (savedContent) {
+        targetDiv.innerHTML = savedContent;
+        console.log('Content loaded:', savedContent);
+    } else {
+        console.log('No content found to load.');
+    }
 }
-
-// Call the sorting function for leg opening
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const sortTrigger = document.getElementById('sortLegLowHigh');
-    if (sortTrigger) {
-        sortTrigger.addEventListener('click', () => {
-            sortPantsByLegOpening('ascending');
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const sortTrigger = document.getElementById('sortLegHighLow');
-    if (sortTrigger) {
-        sortTrigger.addEventListener('click', () => {
-            sortPantsByLegOpening('descending');
-        });
-    }
-});
-
-
-/**
- * 
- * @param {string} order options (descending, ascending) deciding if to sort low to high or high to low by thigh
- */
-function sortPantsByLegOpening(order = 'ascending') {
-    const container = document.getElementById('content');
-    const pantsCards = Array.from(container.getElementsByClassName('pantsCard'));
-
-    pantsCards.sort((a, b) => {
-      const aLegOpening = parseFloat(a.getAttribute('thigh')) || 0;
-      const bLegOpening = parseFloat(b.getAttribute('thigh')) || 0;
-      
-      if (order === 'descending') {
-          return bLegOpening - aLegOpening; // Sort high to low
-      } else {
-          return aLegOpening - bLegOpening; // Sort low to high (default)
-      }
-    });
-
-    // Clear the container
-    container.innerHTML = '';
-
-    // Append sorted pantsCards
-    pantsCards.forEach(pantsCard => container.appendChild(pantsCard));
-}
-
-// Call the sorting function for leg opening
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const sortTrigger = document.getElementById('sortThighLowHigh');
-    if (sortTrigger) {
-        sortTrigger.addEventListener('click', () => {
-            sortPantsByLegOpening('ascending');
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const sortTrigger = document.getElementById('sortThighHighLow');
-    if (sortTrigger) {
-        sortTrigger.addEventListener('click', () => {
-            sortPantsByLegOpening('descending');
-        });
-    }
-});
-
-
-
-
-/**
- * 
- * @param {string} order options (descending, ascending) deciding if to sort low to high or high to low by rise
- */
-function sortPantsByLegOpening(order = 'ascending') {
-    const container = document.getElementById('content');
-    const pantsCards = Array.from(container.getElementsByClassName('pantsCard'));
-
-    pantsCards.sort((a, b) => {
-      const aLegOpening = parseFloat(a.getAttribute('rise')) || 0;
-      const bLegOpening = parseFloat(b.getAttribute('rise')) || 0;
-      
-      if (order === 'descending') {
-          return bLegOpening - aLegOpening; // Sort high to low
-      } else {
-          return aLegOpening - bLegOpening; // Sort low to high (default)
-      }
-    });
-
-    // Clear the container
-    container.innerHTML = '';
-
-    // Append sorted pantsCards
-    pantsCards.forEach(pantsCard => container.appendChild(pantsCard));
-}
-
-// Call the sorting function for leg opening
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const sortTrigger = document.getElementById('sortRiseLowHigh');
-    if (sortTrigger) {
-        sortTrigger.addEventListener('click', () => {
-            sortPantsByLegOpening('ascending');
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const sortTrigger = document.getElementById('sortThighHighLow');
-    if (sortTrigger) {
-        sortTrigger.addEventListener('click', () => {
-            sortPantsByLegOpening('descending');
-        });
-    }
-});
-
-
-
 
 
 
@@ -187,39 +51,102 @@ function displayPantsByLegOpening(min, max) {
     filteredPantsCards.forEach(pantsCard => container.appendChild(pantsCard));
 }
 
-// Call the display function for leg opening
+
+
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const displayTrigger = document.getElementById('hem810');
-    if (displayTrigger) {
-        displayTrigger.addEventListener('click', () => {
+
+    saveContent();
+
+    //handles filtering for hem (leg-opening)
+
+    const hem68 = document.getElementById('hem68');
+    if (hem68) {
+        hem68.addEventListener('click', () => {
             displayPantsByLegOpening(8, 10);
         });
     }
-});
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const displayTrigger = document.getElementById('hem1012');
-    if (displayTrigger) {
-        displayTrigger.addEventListener('click', () => {
-            displayPantsByLegOpening(10, 12);
+    
+    const hem810 = document.getElementById('hem810');
+    if (hem810) {
+        hem810.addEventListener('click', () => {
+            displayPantsByLegOpening(8, 10);
         });
     }
-});
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Add click event listener to the specified <p> element
-    const displayTrigger = document.getElementById('hem1517');
-    if (displayTrigger) {
-        displayTrigger.addEventListener('click', () => {
+
+    const hem1517 = document.getElementById('hem1517');
+    if (hem1517) {
+        hem1517.addEventListener('click', () => {
             displayPantsByLegOpening(15, 17);
         });
     }
+
+    const hem1012 = document.getElementById('hem1012');
+    if (hem1012) {
+        hem1012.addEventListener('click', () => {
+            displayPantsByLegOpening(10, 12);
+        });
+    }
+
+    const resetButton = document.getElementById('resetFilters')
+    if (resetButton) {
+        resetButton.addEventListener('click', () => {
+            loadContent();
+        });
+    }
+    
 });
 
 
+// document.addEventListener('DOMContentLoaded', (event) => {
+
+//     saveContent();
+    
+// });
+
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     const hem1012 = document.getElementById('hem1012');
+//     if (hem1012) {
+//         hem1012.addEventListener('click', () => {
+//             displayPantsByLegOpening(10, 12);
+//         });
+//     }
+// });
+
+
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     const resetButton = document.getElementById('resetFilters')
+//     if (resetButton) {
+//         resetButton.addEventListener('click', () => {
+//             loadContent();
+//         });
+//     }
+// });
+
+
+// const hem810 = document.getElementById('hem810');
+    // if (hem810) {
+    //     hem810.addEventListener('click', () => {
+    //         displayPantsByLegOpening(8, 10);
+    //     });
+    // }
+
+    
+    
+    // const hem1517 = document.getElementById('hem1517');
+    // if (hem1517) {
+    //     hem1517.addEventListener('click', () => {
+    //         displayPantsByLegOpening(15, 17);
+    //     });
+    // }
+
+    // const hem1012 = document.getElementById('hem1012');
+    // if (hem1012) {
+    //     hem1012.addEventListener('click', () => {
+    //         displayPantsByLegOpening(10, 12);
+    //     });
+    // }
 
 
 /**
