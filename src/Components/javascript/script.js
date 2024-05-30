@@ -155,3 +155,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
  * have restore button to make everything go back
  * if a button is unclicked, remove all of those params from current state (Could have to redo all of the current selected)
  */
+
+//deleted a folder called public that had an index.html
