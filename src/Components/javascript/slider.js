@@ -1,35 +1,28 @@
-// Example for handling multiple sliders
+const sliderLower = document.getElementById('slider-lower');
+const sliderUpper = document.getElementById('slider-upper');
+const valueLower = document.getElementById('value-lower');
+const valueUpper = document.getElementById('value-upper');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const sliders = document.querySelectorAll('.slider-container');
+function updateValues() {
+    let lowerValue = parseFloat(sliderLower.value);
+    let upperValue = parseFloat(sliderUpper.value);
 
-    sliders.forEach((slider, index) => {
-        const sliderLower = slider.querySelector('.slider-lower');
-        const sliderUpper = slider.querySelector('.slider-upper');
-        const valueLower = slider.nextElementSibling.querySelector('.value-lower');
-        const valueUpper = slider.nextElementSibling.querySelector('.value-upper');
+    if (lowerValue >= upperValue) {
+        lowerValue = upperValue - 0.5;
+        sliderLower.value = lowerValue;
+    }
 
-        function updateValues() {
-            let lowerValue = parseFloat(sliderLower.value);
-            let upperValue = parseFloat(sliderUpper.value);
+    if (upperValue <= lowerValue) {
+        upperValue = lowerValue + 0.5;
+        sliderUpper.value = upperValue;
+    }
 
-            if (lowerValue >= upperValue) {
-                lowerValue = upperValue - 0.5;
-                sliderLower.value = lowerValue;
-            }
+    valueLower.textContent = lowerValue.toFixed(1);
+    valueUpper.textContent = upperValue.toFixed(1);
+}
 
-            if (upperValue <= lowerValue) {
-                upperValue = lowerValue + 0.5;
-                sliderUpper.value = upperValue;
-            }
+sliderLower.addEventListener('input', updateValues);
+sliderUpper.addEventListener('input', updateValues);
 
-            valueLower.textContent = lowerValue.toFixed(1);
-            valueUpper.textContent = upperValue.toFixed(1);
-        }
+updateValues();
 
-        sliderLower.addEventListener('input', updateValues);
-        sliderUpper.addEventListener('input', updateValues);
-
-        updateValues();
-    });
-});
