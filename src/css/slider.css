@@ -1,12 +1,4 @@
-/* body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-} */
-
+/* Styles for the slider */
 .slider-container {
     position: relative;
     width: 100%;
@@ -43,9 +35,9 @@ input[type="range"]::-webkit-slider-thumb {
     height: 2vw; /* Relative height */
     max-width: 20px; /* Max width */
     max-height: 20px; /* Max height */
-    min-height: 10px;
-    min-width: 10px;
-    background: #000000;
+    min-width: 10px; /* Min width */
+    min-height: 10px; /* Min height */
+    background: #000000; /* Thumb color */
     border-radius: 50%;
     cursor: pointer;
     -webkit-appearance: none;
@@ -56,20 +48,30 @@ input[type="range"]::-moz-range-thumb {
     pointer-events: all;
     width: 2vw; /* Relative width */
     height: 2vw; /* Relative height */
-    background: #007bff;
+    max-width: 20px; /* Max width */
+    max-height: 20px; /* Max height */
+    min-width: 10px; /* Min width */
+    min-height: 10px; /* Min height */
+    background: #000000; /* Thumb color */
     border-radius: 50%;
     cursor: pointer;
 }
 
 input[type="range"]::-ms-thumb {
     pointer-events: all;
-    width: 20px;
-    height: 20px;
-    background: #007bff;
+    width: 2vw; /* Relative width */
+    height: 2vw; /* Relative height */
+    max-width: 20px; /* Max width */
+    max-height: 20px; /* Max height */
+    min-width: 10px; /* Min width */
+    min-height: 10px; /* Min height */
+    background: #000000; /* Thumb color */
     border-radius: 50%;
     cursor: pointer;
 }
 
 .values {
-    margin-top: 20px;
+    margin-top: 5px;
+    font-size: 85%;
+    text-align: center;
 }
