@@ -10,6 +10,9 @@
 
         <!-- This is linking for the main style sheet -->
         <link rel="stylesheet" href="./src/css/style.css">
+        <link rel="stylesheet" href ="./src/css/slider.css">
+        <link rel="stylesheet" href ="./src/css/slider2.css">
+        <link rel="stylesheet" href ="./src/css/slider3.css">
     
         <!-- This is the linking for fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,39 +46,58 @@
                 <h4>FILTER</h4>
                 <div class="buttonGroup">
                     <p>THIGH</p>
-                    <button>8-10</button>
-                    <button>10-12</button>
-                    <button>12-14</button>
+                    <div class="slider-container1">
+                        <div class="slider-track1"></div>
+                        <input type="range" min="5" max="15" step="0.5" value="5" id="slider-lower1">
+                        <input type="range" min="5" max="15" step="0.5" value="15" id="slider-upper1">
+                    </div>
+                    <div class="values1">
+                        <span id="value-lower1">5.0</span> - <span id="value-upper1">15.0</span>
+                    </div>
                 </div>
 
                 <div class="buttonGroup">
                     <p>LEG OPENING</p>
-                    <button id="hem68">6-8</button>
-                    <button id="hem810">8-10</button>
-                    <button id="hem1012">10-12</button>
-                    <button id="hem1517">15-17</button>
+                    <div class="slider-container2">
+                        <div class="slider-track2"></div>
+                        <input type="range" min="5" max="15" step="0.5" value="5" id="slider-lower2">
+                        <input type="range" min="5" max="15" step="0.5" value="15" id="slider-upper2">
+                    </div>
+                    <div class="values2">
+                        <span id="value-lower2">5.0</span> - <span id="value-upper2">15.0</span>
+                    </div>
                 </div>
                 
-                <div class="buttonGroup">
+                <!-- <div class="buttonGroup">
                     <p>TAPER RATIO</p>   
-                    <button><1</button>
-                    <button>~1</button>
-                    <button>>1</button>
-                </div>
+                    <div class="slider-container">
+                        <div class="slider-track"></div>
+                        <input type="range" min="6" max="19" step="0.5" value="9" id="slider-lower">
+                        <input type="range" min="7" max="15" step="0.5" value="12" id="slider-upper">
+                    </div>
+                    <div class="values">
+                        <span id="value-lower">20</span> - <span id="value-upper">80</span>
+                    </div>
+                </div> -->
 
-                <div class="buttonGroup">
+                <!-- <div class="buttonGroup">
                     <p>MATERIAL</p>  
                     <button>Denim</button>
                     <button>Cotton</button>
                     <button>Wool</button>
                     <button>Linen</button>
-                </div>
+                </div> -->
 
                 <div class="buttonGroup">
                     <p>RISE</p>    
-                    <button>6-8</button>
-                    <button>8-10</button>
-                    <button>10-12</button>
+                    <div class="slider-container3">
+                        <div class="slider-track3"></div>
+                        <input type="range" min="5" max="15" step="0.5" value="5" id="slider-lower3">
+                        <input type="range" min="5" max="15" step="0.5" value="15" id="slider-upper3">
+                    </div>
+                    <div class="values3">
+                        <span id="value-lower3">5.0</span> - <span id="value-upper3">15.0</span>
+                    </div>
                 </div>
 
                 <div class="buttonGroup">
@@ -130,7 +152,7 @@
             
 
             
-                <div class="pantsCard" rise="-1" thigh="13.75" knee="11.45" leg-opening="10.65">
+                <div class="pantsCard" rise="13 " thigh="13.75" knee="11.45" leg-opening="10.65">
                     <div class="pantsCardIMG">
                         <img class="coverIMG" src="./src/assets/pantsIMGS/brainDeadSelvadgeIMG.png"/>
                         <img class="hoverIMG" src="./src/assets/pantsIMGS/Type_00_15.5oz_Selvedge_Yoshiwa_Denim_Indigo_Front_optimized_3f97af3a-2f8e-4027-b9b8-eb65b2a10aa6-removebg-preview.png"/>
@@ -164,6 +186,9 @@
       
 
     <script src="src/Components/javascript/script.js"></script>
+    <script src="src/Components/javascript/slider.js"></script>
+    <!-- <script src="src/Components/javascript/slider2.js"></script>
+    <script src="src/Components/javascript/slider3.js"></script> -->
 
     </body>
 </html>
