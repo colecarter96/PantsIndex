@@ -99,6 +99,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
+//Functions for the mobile slider pop out
+document.getElementById("hamburgerMenu").addEventListener("click", function() {
+    document.getElementById("leftNav").classList.add("open");
+});
+
+document.getElementById("closeButton").addEventListener("click", function() {
+    document.getElementById("leftNav").classList.remove("open");
+});
+
+
+
 // document.addEventListener('DOMContentLoaded', (event) => {
 
 //     saveContent();
