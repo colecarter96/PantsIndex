@@ -199,7 +199,7 @@ header {
     }
     
     #header{
-        height: 7%;
+        height: 50px;
         width: 100%;
 
     }
@@ -250,14 +250,6 @@ header {
         cursor: pointer;
         color: black; /* Make the 'X' black */
     }
-
-    
-
-
-    
-    
-    
-
  
 
     header {
