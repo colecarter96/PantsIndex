@@ -77,11 +77,31 @@ input[type="range"]::-ms-thumb {
 }
 
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 1200px) {
 
     .slider-container3{
         width: 50%;
         padding-left: 10%;
         padding-right: 10%;
     }
+
+    .slider-container3 input[type="range"]::-webkit-slider-thumb {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .slider-container3 input[type="range"]::-moz-range-thumb {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .slider-container3 input[type="range"]::-ms-thumb {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .values3{
+        width: 93%;
+    }
+
 }

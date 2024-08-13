@@ -174,17 +174,16 @@ header {
 
  /* for mobile */
 
- @media all and (max-width: 600px) {
+ @media all and (max-width: 1200px) {
 
-    body, html {
+    /* body, html {
         padding : 0px;
         margin : 0px;
         height : 100%;
         width: 100%;
         font-family: "Libre Franklin", sans-serif;
         font-weight: 400;
-        /* background: rgb(0, 0, 0); */
-    } 
+    }  */
     
     
 
@@ -202,15 +201,9 @@ header {
     #header{
         height: 7%;
         width: 100%;
+
     }
 
-    #header h5{
-        display: none; /* display this to see filter thing*/
-        margin: 0;
-        padding: 0;
-        float: left;
-        clear: none;
-    }
 
     
 
@@ -229,6 +222,7 @@ header {
     #leftNav {
         position: fixed;
         top: 0;
+        padding-top: 10%;
         left: -105%; /* Completely hides the slider off-screen */
         width: 90%;
         height: 100%;
@@ -236,7 +230,7 @@ header {
         transition: left 0.3s ease;
         padding-left: 10%;
         z-index: 1000; /* Ensure it is on top of other content */
-
+        /* overflow-x: hidden; */
     }
 
     
@@ -256,6 +250,8 @@ header {
         cursor: pointer;
         color: black; /* Make the 'X' black */
     }
+
+    
 
 
     
@@ -279,18 +275,18 @@ header {
 
     hr {
         display: block;
-        width: 100%;
+        /* width: 100%; */
         top:0;
         left:0;
         margin: 0;
         padding: 0;
-    }
+        /* overflow-x: hidden; */
+    } 
 
     .pantsCard{
         float: left; 
         width: 48%;
         padding: 1%;
-
     }
 
     .pantsCard h3{
@@ -329,3 +325,11 @@ header {
  
 
  
+
+ /* @media all and (max-width: 800px) {
+
+
+        #hamburgerMenu{
+            font-size: 35px;
+        }
+ } */
