@@ -100,7 +100,7 @@ header {
 }
 
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 1200px) {
 
     body, html {
         padding : 0px;
@@ -125,8 +125,9 @@ header {
     }
     
     #header{
-        height: 7%;
+        height: 50px;
         width: 100%;
+
     }
 
     #leftNav {
@@ -149,18 +150,20 @@ header {
         left: 0;
         /* width: 100%; */
         font-weight:500; 
-        text-align: center;    
-   }
+        text-align: center;
+
+    }
 
 
     hr {
         display: block;
-        width: 100%;
+        /* width: 100%; */
         top:0;
         left:0;
         margin: 0;
         padding: 0;
-    }
+        /* overflow-x: hidden; */
+    } 
 
     
  }
