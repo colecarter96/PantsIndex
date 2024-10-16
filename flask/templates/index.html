@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pants Finder</title>
+    <script>
+        function sendData() {
+            let rise = document.getElementById("rise").value;
+            let thigh = document.getElementById("thigh").value;
+            let leg_opening = document.getElementById("leg_opening").value;
+
+            fetch('/process', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ rise: rise, thigh: thigh, leg_opening: leg_opening })
+            })
+            .then(response => response.json())
+            .then(data => {
+                let resultDiv = document.getElementById("result");
+                resultDiv.innerHTML = ""; // Clear previous results
+                data.forEach((item, index) => {
+                    resultDiv.innerHTML += `<p>${index + 1}: ${item}</p>`;
+                });
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</head>
+<body>
+    <h1>Pants Finder</h1>
+    <label for="rise">Rise:</label>
+    <input type="text" id="rise" required><br>
+    <label for="thigh">Thigh:</label>
+    <input type="text" id="thigh" required><br>
+    <label for="leg_opening">Leg Opening:</label>
+    <input type="text" id="leg_opening" required><br>
+    <button onclick="sendData()">Find Similar Pants</button>
+
+    <div id="result"></div>
+</body>
+</html>
