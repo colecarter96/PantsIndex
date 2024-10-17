@@ -1,4 +1,5 @@
 import csv
+import os
 
 # Path to your CSV file
 csv_file_path = '../../../PantsIndexData - Sheet1.csv'
@@ -155,24 +156,33 @@ html_content = """
 
 """
 
+
+
 # Loop through each pants entry from the CSV and add it as a pants card in the HTML
 for i in pants_data:
     pants_card = f"""
-                    <div class="pantsCard" onclick="location.href='./src/pages/carharttNolan/carharttNolan.html';" rise="{i['Rise']}" thigh="{i['Thigh']}" knee="{i['Knee']}" leg-opening="{i['Leg Opening']}">
-                        <div class="pantsCardIMG">
-                            <img class="coverIMG" src="./src/assets/pantsIMGS/{i['Brand'].replace(' ', '').lower()}{i['Model Name'].replace(' ', '').lower()}Cover.jpg"/>
-                            <img class="hoverIMG" src="./src/assets/pantsIMGS/{i['Brand'].replace(' ', '').lower()}{i['Model Name'].replace(' ', '').lower()}Hover.jpg"/>
-                        </div>
-                        <h3>{i['Model Name'].upper()}</h3>
-                        <p>{i['Brand'].upper()}</p>
-                        <p><strong>{i['Price']}</strong></p>
+
+                <div class="pantsCard" onclick="location.href='./src/pages/{i['Brand'].replace(' ', '').replace('\'', '').lower()}{i['Model Name'].replace(' ', '').replace('\'', '').lower()}/{i['Brand'].replace(' ', '').replace('\'', '').lower()}{i['Model Name'].replace(' ', '').replace('\'', '').lower()}.html';" rise="{i['Rise']}" thigh="{i['Thigh']}" knee="{i['Knee']}" leg-opening="{i['Leg Opening']}">
+                    <div class="pantsCardIMG">
+                        <img class="coverIMG" src="./src/assets/pantsIMGS/{i['Brand'].replace(' ', '_').replace('\'', '').lower()}_{i['Model Name'].replace(' ', '_').replace('\'', '').lower()}Cover.jpg"/>
+                        <img class="hoverIMG" src="./src/assets/pantsIMGS/{i['Brand'].replace(' ', '_').replace('\'', '').lower()}_{i['Model Name'].replace(' ', '_').replace('\'', '').lower()}Hover.jpg"/>
                     </div>
+                    <h3>{i['Model Name'].upper()}</h3>
+                    <p>{i['Brand'].upper()}</p>
+                    <p><strong>{i['Price']}</strong></p>
+                </div>
+
     """
-    html_content += pants_card
+    coverStr = i['Brand'].replace(' ', '_').replace('\'', '').lower() + "_" + i['Model Name'].replace(' ', '_').replace('\'', '').lower() + "Cover" + ".jpg"
+    hoverStr = i['Brand'].replace(' ', '_').replace('\'', '').lower() + "_" + i['Model Name'].replace(' ', '_').replace('\'', '').lower() + "Hover" + ".jpg"
+    filepath = f'../../assets/pantsIMGS/{coverStr}'
+
+    if os.path.exists(filepath):
+        html_content += pants_card
 
 # Close the content div and add slider functionality
 html_content += """
-                </div>
+            </div>
 
             
 
